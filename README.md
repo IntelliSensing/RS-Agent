@@ -108,5 +108,5 @@ Recent advancements in Large Language Models (LLMs) and Multi-modal Large Langua
 
 ## <a id="acknowledgments"></a>Acknowledgments
 
-We are thankful to the tools used in our RS-Agent for releasing their models and code as open-source contributions.
+We are thankful to the amazing open-sourced LLMs and the tools used in our RS-Agent for releasing their models and code as open-source contributions.
 
