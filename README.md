@@ -88,30 +88,37 @@ Recent advancements in Large Language Models (LLMs) and Multi-modal Large Langua
 | land_use_classification | Land use categorization                         | What are the land use types in this image?           |
 
 ## <a id="Results"></a>Results
-###Quantitative Results
+
+### Quantitative Results
+
+To evaluate RS-Agent’s adaptability, we evaluate its task planning accuracy when paired with different closed-source (GPT series) and open-source LLMs. This analysis helps reveal whether RS-Agent can maintain or improve performance as the underlying model changes.
 
 | Task                        | ChatGPT (3.5-turbo-1106) | ChatGPT (3.5-turbo) | ChatGPT (4o-mini) | LLaMa 3.1 (8B) | LLaMa 3.1 (70B) | Qwen2.5 (14B) | Qwen2.5 (32B) | Qwen2.5 (72B) | DeepSeek-r1 (70B) |
 |-----------------------------|-------------------------|---------------------|-------------------|----------------|-----------------|----------------|----------------|----------------|-------------------|
 |                             | (87.71t/s)              | (65.03t/s)          | (58.87t/s)        | (100.78t/s)    | (17.71t/s)      | (69.61t/s)      | (36.77t/s)      | (16.24t/s)      | (18.25t/s)       |
-| **Cloud Removal**            | 95.00%                  | 95.00%              | 100.00%           | 100.00%        | 100.00%          | 100.00%         | 95.00%          | 100.00%         | 100.00%          |
-| **Image Dehazing**           | 30.00%                  | 95.00%              | 100.00%           | 100.00%        | 100.00%          | 100.00%         | 100.00%         | 100.00%         | 75.00%           |
-| **Super Resolution**        | 100.00%                 | 100.00%             | 100.00%           | 0.00%          | 100.00%          | 100.00%         | 100.00%         | 100.00%         | 95.00%           |
-| **Denoising**                | 90.00%                  | 100.00%             | 100.00%           | 100.00%        | 100.00%          | 100.00%         | 100.00%         | 100.00%         | 90.00%           |
+| **Cloud Removal**            | 95.00%                  | 95.00%              | 100%           | 100%        | 100%          | 100%         | 95.00%          | 100%         | 100%          |
+| **Image Dehazing**           | 30.00%                  | 95.00%              | 100%           | 100%        | 100%          | 100%         | 100%         | 100%         | 75.00%           |
+| **Super Resolution**        | 100%                 | 100%             | 100%           | 0.00%          | 100%          | 100%         | 100%         | 100%         | 95.00%           |
+| **Denoising**                | 90.00%                  | 100%             | 100%           | 100%        | 100%          | 100%         | 100%         | 100%         | 90.00%           |
 | **Image Captioning**         | 55.00%                  | 45.00%              | 90.00%            | 15.00%         | 60.00%           | 70.00%          | 80.00%          | 80.00%          | 10.00%           |
-| **Object Detection**         | 75.00%                  | 60.00%              | 95.00%            | 30.00%         | 90.00%           | 90.00%          | 85.00%          | 100.00%         | 85.00%           |
-| **Optical Plane Classification** | 100.00%            | 100.00%             | 100.00%           | 100.00%        | 100.00%          | 100.00%         | 100.00%         | 100.00%         | 95.00%           |
-| **Scene Classification**     | 20.00%                  | 90.00%              | 100.00%           | 80.00%         | 90.00%           | 90.00%          | 100.00%         | 100.00%         | 50.00%           |
-| **SAR Detection**            | 30.00%                  | 100.00%             | 100.00%           | 75.00%         | 95.00%           | 100.00%         | 100.00%         | 100.00%         | 100.00%          |
-| **SAR Plane Classification** | 100.00%                 | 100.00%             | 100.00%           | 100.00%        | 100.00%          | 100.00%         | 100.00%         | 100.00%         | 90.00%           |
-| **Knowledge Search**         | 100.00%                 | 100.00%             | 100.00%           | 100.00%        | 80.00%           | 100.00%         | 100.00%         | 100.00%         | 10.00%           |
-| **Building Damage Detection** | 100.00%                | 100.00%             | 100.00%           | 100.00%        | 100.00%          | 95.00%          | 100.00%         | 100.00%         | 100.00%          |
-| **Building Extraction**      | 10.00%                  | 70.00%              | 100.00%           | 55.00%         | 100.00%          | 100.00%         | 100.00%         | 100.00%         | 100.00%          |
-| **Road Extraction**          | 15.00%                  | 55.00%              | 100.00%           | 65.00%         | 100.00%          | 100.00%         | 100.00%         | 100.00%         | 100.00%          |
-| **Horizontal Detection**     | 20.00%                  | 55.00%              | 100.00%           | 95.00%         | 100.00%          | 100.00%         | 100.00%         | 100.00%         | 100.00%          |
-| **Rotated Detection**        | 15.00%                  | 35.00%              | 100.00%           | 85.00%         | 90.00%           | 100.00%         | 100.00%         | 100.00%         | 100.00%          |
-| **Semantic Segmentation**    | 60.00%                  | 100.00%             | 100.00%           | 80.00%         | 100.00%          | 100.00%         | 100.00%         | 100.00%         | 80.00%           |
-| **Land Use Classification**  | 15.00%                  | 100.00%             | 100.00%           | 75.00%         | 100.00%          | 100.00%         | 100.00%         | 95.00%          | 95.00%           |
+| **Object Detection**         | 75.00%                  | 60.00%              | 95.00%            | 30.00%         | 90.00%           | 90.00%          | 85.00%          | 100%         | 85.00%           |
+| **Optical Plane Classification** | 100%            | 100%             | 100%           | 100%        | 100%          | 100%         | 100%         | 100%         | 95.00%           |
+| **Scene Classification**     | 20.00%                  | 90.00%              | 100%           | 80.00%         | 90.00%           | 90.00%          | 100%         | 100%         | 50.00%           |
+| **SAR Detection**            | 30.00%                  | 100%             | 100%           | 75.00%         | 95.00%           | 100%         | 100%         | 100%         | 100%          |
+| **SAR Plane Classification** | 100%                 | 100%             | 100%           | 100%        | 100%          | 100%         | 100%         | 100%         | 90.00%           |
+| **Knowledge Search**         | 100%                 | 100%             | 100%           | 100%        | 80.00%           | 100%         | 100%         | 100%         | 10.00%           |
+| **Building Damage Detection** | 100%                | 100%             | 100%           | 100%        | 100%          | 95.00%          | 100%         | 100%         | 100%          |
+| **Building Extraction**      | 10.00%                  | 70.00%              | 100%           | 55.00%         | 100%          | 100%         | 100%         | 100%         | 100%          |
+| **Road Extraction**          | 15.00%                  | 55.00%              | 100%           | 65.00%         | 100%          | 100%         | 100%         | 100%         | 100%          |
+| **Horizontal Detection**     | 20.00%                  | 55.00%              | 100%           | 95.00%         | 100%          | 100%         | 100%         | 100%         | 100%          |
+| **Rotated Detection**        | 15.00%                  | 35.00%              | 100%           | 85.00%         | 90.00%           | 100%         | 100%         | 100%         | 100%          |
+| **Semantic Segmentation**    | 60.00%                  | 100%             | 100%           | 80.00%         | 100%          | 100%         | 100%         | 100%         | 80.00%           |
+| **Land Use Classification**  | 15.00%                  | 100%             | 100%           | 75.00%         | 100%          | 100%         | 100%         | 95.00%          | 95.00%           |
 | **Average Accuracy**         | 57.22%                  | 82.50%              | 99.17%             | 75.28%         | 94.72%           | 96.94%          | 97.78%          | 98.61%          | 81.94%           |
+
+### Qualitative Results
+
+This figure shows several key tools that highlight the core capabilities of RS-Agent. The input image represents the image input by the user. The blue box shows the user's request, and the red box shows the RS-Agent's reply.
 
 <figure>
 <div align="center">
