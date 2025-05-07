@@ -1,12 +1,35 @@
 <h1 align="center"> RS-Agent: An LLM-driven Remote Sensing Intelligent Agent </h1> 
 
-<h5 align="center"><em>Wenjia Xu*, Zijian Yu*, Boyang Mu, Zhiwei Wei, Yuanben Zhang, Jiuniu Wang, and Mugen Peng</em>
-</br>(*Equal Contribution)</h5>
+<p align="center">
+  <a href="http://wenjia.ruantang.top/">Wenjia Xu</a><sup>*</sup>, 
+  <a href="https://scholar.google.com/citations?user=iZ3TxmoAAAAJ">Zijian Yu</a><sup>*</sup>, 
+  <a href="https://sites.google.com/site/">Boyang Mu</a>, 
+  <a href="https://trentonwei.github.io/">Zhiwei Wei</a>, 
+  <a href="https://sites.google.com/site/">Yuanben Zhang</a>, 
+  <a href="https://jiuniu.ruantang.top/">Jiuniu Wang</a> and 
+  <a href="https://scholar.google.com/citations?user=85mAZVcAAAAJ&hl">Mugen Peng</a>
+  <br><sup>*</sup> Equal Contribution
+</p>
 
 <figure>
 <div align="center">
 <img src=images/Agent-logo.png width="15%">
 </figure>
+
+
+<p align="center">
+  <a href="https://intellisensing.github.io/RS-Agent/">
+    <img src="https://img.shields.io/badge/Project-Website-87CEEB" alt="Website">
+  </a>
+  <a href="https://arxiv.org/abs/2406.07089">
+    <img src="https://img.shields.io/badge/arXiv-Paper-red.svg" alt="Paper">
+  </a>
+  <a href="https://youtu.be/KOKtkkKpNDk">
+    <img src="https://img.shields.io/badge/Video-Presentation-F9D371" alt="Video">
+  </a>
+</p>
+
+
 <p align="center">
   <a href="#introduction">Introduction</a> |
   <a href="#core components">Core Components</a> |
