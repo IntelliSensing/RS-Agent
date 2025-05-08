@@ -11,7 +11,13 @@
   <br><sup>*</sup> Equal Contribution
 </p>
 
-#### **State Key Laboratory of Networking and Switching Technology, Beijing University of Posts and Telecommunications; School of Geographic Sciences, Hunan Normal University; Aerospace Information Research Institute, Chinese Academy of Sciences; Department of Computer Science, City University of Hong Kong**
+<p align="center">
+<strong>State Key Laboratory of Networking and Switching Technology, Beijing University of Posts and Telecommunications</strong><br>
+<strong>School of Geographic Sciences, Hunan Normal University</strong><br>
+<strong>Aerospace Information Research Institute, Chinese Academy of Sciences</strong><br>
+<strong>Department of Computer Science, City University of Hong Kong</strong>
+</p>
+
 <figure>
 <div align="center">
 <img src=images/Agent-logo.png width="15%">
@@ -35,7 +41,7 @@
   <a href="#introduction">Introduction</a> |
   <a href="#core components">Core Components</a> |
   <a href="#Supported Function">Supported Function</a> |
-  <a href="#Qualitative Results">Qualitative Results</a> |
+  <a href="#Results">Results</a> |
   <a href="#Contributions">Contributions</a> | 
   <a href="#acknowledgments">Acknowledgements</a> 
 </p>
