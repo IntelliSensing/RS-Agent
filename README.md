@@ -24,7 +24,7 @@
   <a href="https://arxiv.org/abs/2406.07089">
     <img src="https://img.shields.io/badge/arXiv-Paper-red.svg" alt="Paper">
   </a>
-  <a href="https://youtu.be/KOKtkkKpNDk">
+  <a href="https://youtu.be/A-U9oyGsEkw">
     <img src="https://img.shields.io/badge/Video-Presentation-F9D371" alt="Video">
   </a>
 </p>
