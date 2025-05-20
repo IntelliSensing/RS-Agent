@@ -6,7 +6,7 @@
   <a href="https://sites.google.com/site/">Boyang Mu</a>, 
   <a href="https://trentonwei.github.io/">Zhiwei Wei</a>, 
   <a href="https://sites.google.com/site/">Yuanben Zhang</a>, 
-  <a href="https://jiuniu.ruantang.top/">Jiuniu Wang</a> and 
+  <a href="https://sites.google.com/site/">Guangzuo Li</a> and 
   <a href="https://scholar.google.com/citations?user=85mAZVcAAAAJ&hl">Mugen Peng</a>
   <br><sup>*</sup> Equal Contribution
 </p>
@@ -15,7 +15,6 @@
 <strong>State Key Laboratory of Networking and Switching Technology, Beijing University of Posts and Telecommunications</strong><br>
 <strong>School of Geographic Sciences, Hunan Normal University</strong><br>
 <strong>Aerospace Information Research Institute, Chinese Academy of Sciences</strong><br>
-<strong>Department of Computer Science, City University of Hong Kong</strong>
 </p>
 
 <figure>
