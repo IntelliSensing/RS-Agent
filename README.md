@@ -1,4 +1,4 @@
-<h1 align="center"> RS-Agent: An LLM-driven Remote Sensing Intelligent Agent </h1> 
+<h1 align="center"> RS-Agent: Automating Remote Sensing Tasks through Intelligent Agent </h1> 
 
 <p align="center">
   <a href="http://wenjia.ruantang.top/">Wenjia Xu</a><sup>*</sup>, 
