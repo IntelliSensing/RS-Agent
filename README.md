@@ -27,8 +27,6 @@
 </p>
 
 <img src="images/Agent-logo.png" width="200"/>
-<img src="images/BUPT_logo.png" width="200"/>
-<img src="images/SKL_NST.png" width="200"/>
 
 </div>
 
@@ -39,8 +37,7 @@
   <a href="#results">Results</a> |
   <a href="#getting-started">Getting Started</a> |
   <a href="#models">Models</a> |
-  <a href="#toolkit">Toolkit</a> |
-  <a href="#citation">Citation</a>
+  <a href="#toolkit">Toolkit</a>
 </p>
 
 https://github.com/user-attachments/assets/ca5a3494-a6dd-43ae-835e-f222caf2dd9d
@@ -270,17 +267,6 @@ The Knowledge Space uses DualRAG, implemented as a modified LightRAG fork. See [
 2. We propose **Task-Aware Retrieval**, which retrieves expert-level task solutions to emulate professional remote sensing analysts.
 3. We propose **DualRAG**, a retrieval augmented generation method with weighted keyword-aware dual-path retrieval.
 4. Extensive experiments demonstrate RS-Agent consistently surpasses previous SOTA MLLMs across remote sensing applications.
-
-## Citation
-
-```bibtex
-@article{rsagent2025,
-  title={RS-Agent: Automating Remote Sensing Tasks through Intelligent Agent},
-  author={Xu, Wenjia and Yu, Zijian and Mu, Boyang and Wang, Jiuniu and Wei, Zhiwei and Peng, Mugen},
-  journal={Science China Information Sciences},
-  year={2025}
-}
-```
 
 ## Acknowledgments
 
