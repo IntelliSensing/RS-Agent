@@ -1,0 +1,35 @@
+- ["Super_Resolution"]: To solve this kind of task, you should directly use tool 'super_resolution_2x' to get answer, the input to this tool should be the image path.
+
+- ["Denoising"]: To solve this kind of task, you should directly use tool 'denoising' to get answer, the input to this tool should be the image path.
+
+- ["Captioning"]: To solve this kind of task, you should directly use tool 'caption' to get answer, the input to this tool should be the image path.
+
+- ["Optical_Detection"]: To solve this kind of task, you should directly use tool 'optical_detection' to get answer, the input to this tool should be the image path.
+
+- ["Optical_Plane_Type"]: To solve this kind of task, you should directly use tool 'optical_plane_type' to get answer, the input to this tool should be the image path.
+
+- ["Scene_Classification"]: To solve this kind of task, you should directly use tool 'scene' to get answer, the input to this tool should be the image path.
+
+- ["SAR_Detection"]: To solve this kind of task, you should directly use tool 'sar_detection' to get answer, the input to this tool should be the image path.
+
+- ["SAR_Plane_Type"]: To solve this kind of task, you should directly use tool 'sar_plane_type' to get answer, the input to this tool should be the image path.
+
+- ["Knowledge_Search"]: To solve this kind of task, you should directly use tool 'knowledge_search' to get answer, the input to this tool should be the query.
+
+- ["Building_Damage_Detection"]: To solve this kind of task, you should directly use tool 'building_damage_detection' to get answer, the input to this tool should be the image path.
+
+- ["Building_Extraction"]: To solve this kind of task, you should directly use tool 'building_extraction' to get answer, the input to this tool should be the image path.
+
+- ["Road_Extraction"]: To solve this kind of task, you should directly use tool 'road_extraction' to get answer, the input to this tool should be the image path.
+
+- ["Horizontal_Object_Detection"]: To solve this kind of task, you should directly use tool 'horizontal_object_detection' to get answer, the input to this tool should be the image path.
+
+- ["Rotated_Object_Detection"]: To solve this kind of task, you should directly use tool 'rotated_object_detection' to get answer, the input to this tool should be the image path.
+
+- ["Semantic_Segmentation"]: To solve this kind of task, you should directly use tool 'semantic_segmentation' to get answer, the input to this tool should be the image path.
+
+- ["Land_Use_Classification"]: To solve this kind of task, you should directly use tool 'land_use_classification' to get answer, the input to this tool should be the image path.
+
+- ["Image_Dehazing"]: To solve this kind of task, you should directly use tool 'image_dehazing' to get answer, the input to this tool should be the image path.
+
+- ["Cloud_Removal"]: To solve this kind of task, you should directly use tool 'cloud_removal' to get answer, the input to this tool should be the image path.

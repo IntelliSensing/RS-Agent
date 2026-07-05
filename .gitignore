@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+
+# Environment
+.env
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+
+# Outputs
+outputs/
+
+# DualRAG large artifacts (rebuild with reproduce/ scripts)
+dualrag/**/remote_data/
+dualrag/**/mix/
+dualrag/**/remote/
+dualrag/**/remote_sensing/
+dualrag/**/dickens/
+dualrag/**/mix_half*/
+dualrag/datasets/
+dualrag/**/*_results.json
+dualrag/**/*_error_log.json
+dualrag/**/mix_*.json
+dualrag/batch_requests.jsonl
+dualrag/book.txt
+dualrag/*.pdf
+dualrag/lightrag_hku.egg-info/
+dualrag/lightrag-api/
+
+# Model weights
+*.pt
+*.pth
+*.ckpt
+*.zip
+
+# Logs
+*.jsonl
+!data/eval/questions_planning.jsonl
+!data/eval/question_rschatgpt.jsonl

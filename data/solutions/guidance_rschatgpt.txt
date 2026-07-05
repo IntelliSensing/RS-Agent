@@ -1,0 +1,13 @@
+- ["Object_Counting"]: To solve this kind of task, you should directly use tool 'count_text' to get answer, the input to this tool should be a string of the object's name and the image path.
+
+- ["Object_Detection"]: To solve this kind of task, you should directly use tool 'detection' to get answer, the input to this tool should be a string of the object's name and the image path.
+
+- ["Landuse_Segmentation"]: To solve this kind of task, you should directly use tool 'landuse_Segmentation' to get answer, the input to this tool should be a string of the landtype's name and the image path.
+
+- ["Edge_Detection"]: To solve this kind of task, you should directly use tool 'EdgeDetection' to get answer, the input to this tool should be the image path.
+
+- ["Instance_Segmentation"]: To solve this kind of task, you should directly use tool 'Instance_Segmentation' to get answer, the input to this tool should be a string of the object's name and the image path.
+
+- ["Image_Caption"]: To solve this kind of task, you should directly use tool 'Caption' to get answer, the input to this tool should be the image path.
+
+- ["Scene_Classification"]: To solve this kind of task, you should directly use tool 'Scene' to get answer, the input to this tool should be the image path.

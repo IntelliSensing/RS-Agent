@@ -1,0 +1,23 @@
+# Core agent dependencies
+langchain>=0.3.0
+langchain-community>=0.3.0
+langchain-core>=0.3.0
+langchain-openai>=0.2.0
+langchain-huggingface>=0.1.0
+langchainhub>=0.1.0
+
+# Retrieval
+faiss-cpu>=1.7.4
+sentence-transformers>=2.2.0
+
+# Utilities
+python-dotenv>=1.0.0
+pyyaml>=6.0
+tqdm>=4.65.0
+pydantic>=2.0.0
+
+# Optional: local LLM via Ollama
+# ollama>=0.3.0
+
+# DualRAG (install separately)
+# pip install -e dualrag/

@@ -1,0 +1,17 @@
+aiohttp
+configparser
+future
+
+# Basic modules
+gensim
+pipmaster
+pydantic
+python-dotenv
+
+setuptools
+tenacity
+
+# LLM packages
+tiktoken
+
+# Extra libraries are installed when needed using pipmaster
