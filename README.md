@@ -61,7 +61,7 @@ Recent advancements in Large Language Models (LLMs) and Multi-modal Large Langua
 4. **Knowledge Space**: Provides domain-specific information via a curated knowledge database. It supports expert-level reasoning by retrieving relevant content via **DualRAG**.
 
 <p align="center">
-  <img src="images/RS-Agent_framework.png" width="80%"/>
+  <img src="images/RS-Agent_framework.png" width="60%"/>
 </p>
 
 ## Supported Function
