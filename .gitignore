@@ -19,6 +19,9 @@ venv/
 # Outputs
 outputs/
 
+# Local-only helper (do not publish)
+scripts/push_to_github.sh
+
 # DualRAG large artifacts (rebuild with reproduce/ scripts)
 dualrag/**/remote_data/
 dualrag/**/mix/
