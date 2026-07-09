@@ -2,8 +2,8 @@
 
 # RS-Agent: Automating Remote Sensing Tasks through Intelligent Agent
 
-[Wenjia Xu](https://xuwenjia.bupt.edu.cn/)†*, [Zijian Yu](#)†, [Boyang Mu](#), [Jiuniu Wang](#), [Zhiwei Wei](#)* and [Mugen Peng](https://teacher.bupt.edu.cn/pengmugen/zh_CN/index.htm)  
-† Equal Contribution   * Corresponding Author
+[Wenjia Xu](https://xuwenjia.bupt.edu.cn/)<sup>†,*</sup>, [Zijian Yu](#)<sup>†</sup>, [Boyang Mu](#), [Jiuniu Wang](#), [Zhiwei Wei](#)<sup>*</sup> and [Mugen Peng](https://teacher.bupt.edu.cn/pengmugen/zh_CN/index.htm)  
+<sup>†</sup> Equal Contribution &nbsp; <sup>*</sup> Corresponding Authors
 
 **State Key Laboratory of Networking and Switching Technology, Beijing University of Posts and Telecommunications**  
 **School of Geographic Sciences, Hunan Normal University**  
