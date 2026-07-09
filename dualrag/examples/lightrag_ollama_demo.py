@@ -54,8 +54,7 @@ def main():
     
     
     # from pypdf import PdfReader
-    # file_path = '/home/yzj/data2/code2024/GPT/gptAPI_demo/langchain/RS_agent/LightRAG/remote_sensing.pdf'
-    # reader = PdfReader(file_path)
+    # reader = PdfReader("path/to/your/document.pdf")
     # text_content = ""
     # for page in reader.pages:
     #     text_content += page.extract_text()

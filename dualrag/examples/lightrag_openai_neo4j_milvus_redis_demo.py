@@ -15,30 +15,32 @@ print(f"WorkingDir: {WORKING_DIR}")
 # redis
 os.environ["REDIS_URI"] = "redis://localhost:6379"
 
-# neo4j
-BATCH_SIZE_NODES = 500
-BATCH_SIZE_EDGES = 100
-os.environ["NEO4J_URI"] = "bolt://117.50.173.35:7687"
-os.environ["NEO4J_USERNAME"] = "neo4j"
-os.environ["NEO4J_PASSWORD"] = "12345678"
+# neo4j / milvus / redis — configure via environment variables before running
+os.environ.setdefault("NEO4J_URI", "bolt://localhost:7687")
+os.environ.setdefault("NEO4J_USERNAME", "neo4j")
+os.environ.setdefault("NEO4J_PASSWORD", "your-neo4j-password")
 
-# milvus
-os.environ["MILVUS_URI"] = "http://117.50.173.35:19530"
-os.environ["MILVUS_USER"] = "root"
-os.environ["MILVUS_PASSWORD"] = "Milvus"
-os.environ["MILVUS_DB_NAME"] = "lightrag"
+os.environ.setdefault("MILVUS_URI", "http://localhost:19530")
+os.environ.setdefault("MILVUS_USER", "root")
+os.environ.setdefault("MILVUS_PASSWORD", "your-milvus-password")
+os.environ.setdefault("MILVUS_DB_NAME", "lightrag")
+
+ollama_host = os.environ.get("OLLAMA_HOST", "http://localhost:11434")
+openai_api_key = os.environ.get("OPENAI_API_KEY", "")
+openai_api_base = os.environ.get("OPENAI_API_BASE", "https://api.openai.com/v1")
+llm_model = os.environ.get("LLM_MODEL", "gpt-4o-mini")
 
 
 async def llm_model_func(
     prompt, system_prompt=None, history_messages=[], keyword_extraction=False, **kwargs
 ) -> str:
     return await openai_complete_if_cache(
-        "deepseek-chat",
+        llm_model,
         prompt,
         system_prompt=system_prompt,
         history_messages=history_messages,
-        api_key="sk-91d0b59f25554251aa813ed756d79a6d",
-        base_url="https://api.deepseek.com",
+        api_key=openai_api_key,
+        base_url=openai_api_base,
         **kwargs,
     )
 
@@ -47,7 +49,7 @@ embedding_func = EmbeddingFunc(
     embedding_dim=768,
     max_token_size=512,
     func=lambda texts: ollama_embed(
-        texts, embed_model="shaw/dmeta-embedding-zh", host="http://117.50.173.35:11434"
+        texts, embed_model="shaw/dmeta-embedding-zh", host=ollama_host
     ),
 )
 

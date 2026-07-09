@@ -58,11 +58,15 @@ def extract_unique_contexts(input_directory, output_directory):
 
 
 if __name__ == "__main__":
+    from pathlib import Path
+
+    dualrag_root = Path(__file__).resolve().parents[1]
+    default_input = dualrag_root / "datasets"
+    default_output = dualrag_root / "datasets" / "unique_contexts"
+
     parser = argparse.ArgumentParser()
-    parser.add_argument("-i", "--input_dir", type=str, default="/home/yzj/data2/code2024/GPT/gptAPI_demo/langchain/RS_agent/LightRAG/datasets")
-    parser.add_argument(
-        "-o", "--output_dir", type=str, default="/home/yzj/data2/code2024/GPT/gptAPI_demo/langchain/RS_agent/LightRAG/datasets/unique_contexts"
-    )
+    parser.add_argument("-i", "--input_dir", type=str, default=str(default_input))
+    parser.add_argument("-o", "--output_dir", type=str, default=str(default_output))
 
     args = parser.parse_args()
 

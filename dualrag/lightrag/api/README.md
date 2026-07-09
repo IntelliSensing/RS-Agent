@@ -176,8 +176,8 @@ Modify your service startup script: `lightrag-api`. Change you python virtual en
 ```shell
 #!/bin/bash
 
-# your python virtual environment activation
-source /home/netman/lightrag-xyj/venv/bin/activate
+# Activate your Python virtual environment
+source /path/to/your/venv/bin/activate
 # start lightrag api server
 lightrag-server
 ```

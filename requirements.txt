@@ -1,23 +1,34 @@
-# Core agent dependencies
-langchain>=0.3.0
+# RS-Agent core dependencies
+# Install: pip install -r requirements.txt
+# Dev tools: pip install -e ".[dev]"
+
+# LangChain agent stack
+langchain>=0.3.0,<0.4.0
 langchain-community>=0.3.0
 langchain-core>=0.3.0
 langchain-openai>=0.2.0
 langchain-huggingface>=0.1.0
+langchain-text-splitters>=0.3.0
 langchainhub>=0.1.0
 
-# Retrieval
-faiss-cpu>=1.7.4
+# LLM / embedding backends
+openai>=1.0.0
+huggingface-hub>=0.20.0
 sentence-transformers>=2.2.0
 
-# Utilities
+# Vector retrieval
+faiss-cpu>=1.7.4
+numpy>=1.24.0
+
+# Config & utilities
 python-dotenv>=1.0.0
 pyyaml>=6.0
 tqdm>=4.65.0
 pydantic>=2.0.0
 
 # Optional: local LLM via Ollama
+# langchain-ollama>=0.2.0
 # ollama>=0.3.0
 
-# DualRAG (install separately)
-# pip install -e dualrag/
+# DualRAG (Knowledge Space): install separately
+# cd dualrag && pip install -e .

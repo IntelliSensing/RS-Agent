@@ -2,6 +2,7 @@ import os
 import json
 import time
 import asyncio
+from pathlib import Path
 
 from lightrag import LightRAG
 from lightrag.kg.shared_storage import initialize_pipeline_status
@@ -26,7 +27,7 @@ def insert_text(rag, file_path):
         print("Insertion failed after exceeding the maximum number of retries")
 
 
-cls = "remote_data"
+cls = "mix"
 WORKING_DIR = f"./{cls}"
 
 if not os.path.exists(WORKING_DIR):
@@ -61,9 +62,11 @@ async def initialize_rag():
 
 
 def main():
-    # Initialize RAG instance
+    dualrag_root = Path(__file__).resolve().parents[1]
+    context_file = dualrag_root / "datasets" / "unique_contexts" / f"{cls}_unique_contexts.json"
+
     rag = asyncio.run(initialize_rag())
-    insert_text(rag, "/home/yzj/data2/code2024/GPT/gptAPI_demo/langchain/RS_agent/LightRAG/wikipedia_data2.json")
+    insert_text(rag, str(context_file))
 
 
 if __name__ == "__main__":

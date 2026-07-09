@@ -19,6 +19,9 @@ venv/
 # Outputs
 outputs/
 
+# Evaluation datasets (local only; pass --input to benchmarks/planning/run_eval.py)
+data/eval/
+
 # Local-only helper (do not publish)
 scripts/push_to_github.sh
 
@@ -29,15 +32,25 @@ dualrag/**/remote/
 dualrag/**/remote_sensing/
 dualrag/**/dickens/
 dualrag/**/mix_half*/
-dualrag/datasets/
 dualrag/**/*_results.json
 dualrag/**/*_error_log.json
-dualrag/**/mix_*.json
+dualrag/*_result*.json
+dualrag/*_errors.json
+dualrag/*_eval_*.json
+dualrag/*_newold_results*
+dualrag/*_oldnew_results*
+dualrag/test_results*.json
 dualrag/batch_requests.jsonl
+dualrag/test.sh
+dualrag/lightrag-api
+dualrag/wikipedia_data2.json
+dualrag/ttt.json
+dualrag/Fundamentals-of-Remote-Sensing.pdf
 dualrag/book.txt
 dualrag/*.pdf
+!dualrag/datasets/
+!dualrag/datasets/**
 dualrag/lightrag_hku.egg-info/
-dualrag/lightrag-api/
 
 # Model weights
 *.pt
@@ -46,6 +59,9 @@ dualrag/lightrag-api/
 *.zip
 
 # Logs
-*.jsonl
-!data/eval/questions_planning.jsonl
-!data/eval/question_rschatgpt.jsonl
+outputs/**/*.jsonl
+dualrag/**/*.jsonl
+!dualrag/datasets/*.jsonl
+# Oversized local-only corpus (>50MB GitHub limit)
+dualrag/datasets/agriculture.jsonl
+dualrag/datasets/unique_contexts/agriculture_unique_contexts.json

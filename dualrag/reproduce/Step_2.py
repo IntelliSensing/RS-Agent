@@ -1,16 +1,21 @@
 import json
 import os
+from pathlib import Path
+
 from openai import OpenAI
 from transformers import GPT2Tokenizer
 
 api_key = os.environ.get("OPENAI_API_KEY", "")
 base_url = os.environ.get("OPENAI_API_BASE", "https://api.openai.com/v1")
 
+DUALRAG_ROOT = Path(__file__).resolve().parents[1]
+DATASETS_DIR = DUALRAG_ROOT / "datasets"
+
 
 def openai_complete_if_cache(
     model="gpt-4o-mini", prompt=None, system_prompt=None, history_messages=[], **kwargs
 ) -> str:
-    openai_client = OpenAI(api_key = api_key, base_url = base_url)
+    openai_client = OpenAI(api_key=api_key, base_url=base_url)
 
     messages = []
     if system_prompt:
@@ -24,7 +29,7 @@ def openai_complete_if_cache(
     return response.choices[0].message.content
 
 
-tokenizer = GPT2Tokenizer.from_pretrained("/home/yzj/data2/code2024/GPT/gptAPI_demo/langchain/RS_agent/LightRAG_orignal/gpt-2")
+tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
 
 
 def get_summary(context, tot_tokens=2000):
@@ -42,7 +47,8 @@ def get_summary(context, tot_tokens=2000):
 
 clses = ["mix"]
 for cls in clses:
-    with open(f"/home/yzj/data2/code2024/GPT/gptAPI_demo/langchain/RS_agent/LightRAG/datasets/unique_contexts/{cls}_unique_contexts.json", mode="r") as f:
+    context_file = DATASETS_DIR / "unique_contexts" / f"{cls}_unique_contexts.json"
+    with open(context_file, mode="r", encoding="utf-8") as f:
         unique_contexts = json.load(f)
 
     summaries = [get_summary(context) for context in unique_contexts]
@@ -75,8 +81,10 @@ for cls in clses:
 
     result = openai_complete_if_cache(model="gpt-4o-mini", prompt=prompt)
 
-    file_path = f"/home/yzj/data2/code2024/GPT/gptAPI_demo/langchain/RS_agent/LightRAG/datasets/questions/{cls}_all_questions.txt"
-    with open(file_path, "w") as file:
+    questions_dir = DATASETS_DIR / "questions"
+    questions_dir.mkdir(parents=True, exist_ok=True)
+    file_path = questions_dir / f"{cls}_all_questions.txt"
+    with open(file_path, "w", encoding="utf-8") as file:
         file.write(result)
 
     print(f"{cls}_questions written to {file_path}")

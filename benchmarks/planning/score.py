@@ -47,8 +47,20 @@ def normalize_task_type(task_type: str) -> str:
     """Normalize task type labels from JSON or LLM output."""
     match = re.search(r"\[([^\]]+)\]", task_type)
     if match:
-        return match.group(1).strip().strip("'\"")
-    return task_type.strip().strip("'\"")
+        normalized = match.group(1).strip().strip("'\"")
+    else:
+        normalized = task_type.strip().strip("'\"")
+
+    aliases = {
+        "Object Counting": "Object_Counting",
+        "Object Detection": "Object_Detection",
+        "Land Use Segmentation": "Landuse_Segmentation",
+        "Image Captioning": "Image_Caption",
+        "Scene Classification": "Scene_Classification",
+        "Instance Segmentation": "Instance_Segmentation",
+        "Edge Detection": "Edge_Detection",
+    }
+    return aliases.get(normalized, normalized)
 
 
 def score_single_tool_prediction(

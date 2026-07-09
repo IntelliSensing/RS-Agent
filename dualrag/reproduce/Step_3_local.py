@@ -1,5 +1,7 @@
 import re
 import json
+from pathlib import Path
+
 from lightrag import LightRAG, QueryParam
 from lightrag.utils import always_get_an_event_loop
 from lightrag.llm.ollama import ollama_model_complete, ollama_embed
@@ -53,7 +55,10 @@ def run_queries_and_save_to_json(
 
 
 if __name__ == "__main__":
-    cls = "remote_data"
+    dualrag_root = Path(__file__).resolve().parents[1]
+    datasets_dir = dualrag_root / "datasets"
+
+    cls = "mix"
     mode = "local"
     WORKING_DIR = f"./{cls}"
 
@@ -77,7 +82,8 @@ if __name__ == "__main__":
     )
     query_param = QueryParam(mode=mode)
 
-    queries = extract_queries("/home/yzj/data2/code2024/GPT/gptAPI_demo/langchain/RS_agent/LightRAG/datasets/questions/remote_data_all_questions.txt")
+    query_file = datasets_dir / "questions" / f"{cls}_questions.txt"
+    queries = extract_queries(str(query_file))
     run_queries_and_save_to_json(
         queries, rag, query_param, f"{cls}_local_result.json", f"{cls}_local_errors.json"
     )

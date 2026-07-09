@@ -1,6 +1,8 @@
 import os
 import re
 import json
+from pathlib import Path
+
 import jsonlines
 
 from openai import OpenAI
@@ -107,10 +109,13 @@ def batch_eval(query_file, result1_file, result2_file, output_file_path):
 
 
 if __name__ == "__main__":
-    query_file = "/home/yzj/data2/code2024/GPT/gptAPI_demo/langchain/RS_agent/LightRAG/datasets/questions/mix_half_questions_4o_mini.txt"
-    result1_file = "/home/yzj/data2/code2024/GPT/gptAPI_demo/langchain/RS_agent/LightRAG/mix_half_result.json"
-    result2_file = "/home/yzj/data2/code2024/GPT/gptAPI_demo/langchain/RS_agent/LightRAG_orignal/mix_half_result.json"
-    output_file_path = "/home/yzj/data2/code2024/GPT/gptAPI_demo/langchain/RS_agent/LightRAG/batch_requests.jsonl"
+    dualrag_root = Path(__file__).resolve().parents[1]
+    datasets_dir = dualrag_root / "datasets"
+
+    query_file = datasets_dir / "questions" / "mix_half_questions_4o_mini.txt"
+    result1_file = dualrag_root / "mix_half_result.json"
+    result2_file = dualrag_root / "mix_half_baseline_result.json"
+    output_file_path = dualrag_root / "batch_requests.jsonl"
 
     batch_eval(query_file, result1_file, result2_file, output_file_path)
 

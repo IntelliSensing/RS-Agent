@@ -19,6 +19,7 @@ agent:
   verbose: false
 
 paths:
+  # Local evaluation JSONL files (not shipped in repo; use --input in run_eval.py)
   eval_questions: data/eval/questions_planning.jsonl
   eval_questions_rschatgpt: data/eval/question_rschatgpt.jsonl
   default_image: examples/sample.png

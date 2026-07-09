@@ -1,17 +1,22 @@
-aiohttp
+# DualRAG core runtime dependencies
+# Install: cd dualrag && pip install -e .
+
+aiohttp>=3.9.0
 configparser
 future
-
-# Basic modules
-gensim
-pipmaster
-pydantic
-python-dotenv
-
+gensim>=4.3.0
+networkx>=3.0
+numpy>=1.24.0
+pipmaster>=0.4.0
+pydantic>=2.0.0
+python-dotenv>=1.0.0
 setuptools
-tenacity
+tenacity>=8.0.0
+tiktoken>=0.5.0
 
-# LLM packages
-tiktoken
+# Used by reproduce/Step_2.py and OpenAI-compatible LLM backends
+openai>=1.0.0
 
-# Extra libraries are installed when needed using pipmaster
+# Optional extras (install as needed)
+# API server: pip install -e ".[api]"
+# Visualizer: pip install -e ".[tools]"

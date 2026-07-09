@@ -25,6 +25,7 @@ class FakeAction:
 def test_normalize_task_type():
     assert normalize_task_type('["Scene_Classification"]') == "Scene_Classification"
     assert normalize_task_type("Scene_Classification") == "Scene_Classification"
+    assert normalize_task_type("Object Counting") == "Object_Counting"
 
 
 def test_extract_first_tool():
@@ -47,8 +48,8 @@ def test_config_loads():
 
 def test_solution_data_exists():
     assert (PROJECT_ROOT / "data/solutions/guidance.txt").exists()
-    assert (PROJECT_ROOT / "data/eval/questions_planning.jsonl").exists()
     assert (PROJECT_ROOT / "data/indices/solution_db/index.faiss").exists()
+    assert (PROJECT_ROOT / "examples/sample.png").exists()
 
 
 def test_stub_tools():

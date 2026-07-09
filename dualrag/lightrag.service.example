@@ -1,15 +1,15 @@
 [Unit]
-Description=LightRAG XYJ Ollama Service
+Description=LightRAG Service
 After=network.target
 
 [Service]
 Type=simple
-User=netman
+User=your-user
 # Memory settings
 MemoryHigh=8G
 MemoryMax=12G
-WorkingDirectory=/home/netman/lightrag-xyj
-ExecStart=/home/netman/lightrag-xyj/lightrag-api
+WorkingDirectory=/path/to/dualrag
+ExecStart=/path/to/your/venv/bin/lightrag-server
 Restart=always
 RestartSec=10
 
