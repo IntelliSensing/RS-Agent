@@ -127,7 +127,7 @@ To evaluate RS-Agent's adaptability, we evaluate its task planning accuracy when
 ### 1. Environment
 
 ```bash
-conda activate gpt        # or your own env with langchain, faiss, etc.
+conda activate rsagent        # or your own env with langchain, faiss, etc.
 git clone https://github.com/IntelliSensing/RS-Agent.git
 cd RS-Agent
 export PYTHONPATH=.
